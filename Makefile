@@ -1,23 +1,22 @@
 SHELL := /usr/local/bin/fish
+.ONESHELL: default prepare run-front run-back run
+.PHONY: default prepare run-front run-back run
 
 default:
-	echo 'make was run!'
+	echo 'make default was run!'
 
 prepare:
-	conda env create -f environment.yml --force
-	ca keegan-site
-	npm install
+	conda env update
+	conda activate keegan-site
+	cd frontend && npm install
 
-prepare-run:
-	make prepare
-	echo $$FLASK_APP
+run-front:
+	npm run build
+	npm run start &
+
+run-back:
 	flask run
 
 run:
-	flask run
-
-.EXPORT_ALL_VARIABLES:
-	FLASK_APP = backend/app
-	FLASK_ENV = development
-
-.PHONY: default prepare prepare-run run
+	conda activate keegan-site
+	make run-back && make run-front

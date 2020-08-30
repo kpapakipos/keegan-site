@@ -1,8 +1,12 @@
 name: keegan-site
+channels:
+  - conda-forge
+  - defaults
 dependencies:
   - python>=3.7
   - flask
   - make
   - pymongo
   - pylint
+  - python-dotenv
   - marshmallow

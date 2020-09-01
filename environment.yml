@@ -4,9 +4,6 @@ channels:
   - defaults
 dependencies:
   - python>=3.7
+  - pylint
   - flask
   - make
-  - pymongo
-  - pylint
-  - python-dotenv
-  - marshmallow

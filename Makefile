@@ -1,6 +1,5 @@
 SHELL := /usr/local/bin/fish
-.ONESHELL: default prepare run-front run-back
-.PHONY: default prepare run-front run-back
+.PHONY: prepare run-front run-back build test full-run
 
 prepare:
 	cd frontend && npm install
@@ -10,3 +9,12 @@ run-front:
 
 run-back:
 	flask run
+
+build:
+	cd frontend && npm run build
+
+test:
+	cd frontend && npm run test
+
+full-run:
+	make prepare build run-back

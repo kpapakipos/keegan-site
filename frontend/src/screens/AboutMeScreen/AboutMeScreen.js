@@ -8,7 +8,6 @@ function AboutMeScreen() {
   return (
     <Document file={myPDF} onLoadError={console.error}>
       <Page pageNumber={1} />
-      <Page pageNumber={2} />
     </Document>
   );
 }

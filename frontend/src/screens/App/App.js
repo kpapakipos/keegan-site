@@ -1,12 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import AboutMeScreen from "screens/AboutMeScreen/AboutMeScreen";
 import HomeScreen from "screens/HomeScreen/HomeScreen";
 import "./App.css";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div>
         <nav>
           <ul>
@@ -30,7 +30,7 @@ function App() {
           </Route>
         </Switch>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 

@@ -7,3 +7,4 @@ dependencies:
   - pylint
   - flask
   - make
+  - zlib>=1.2.11

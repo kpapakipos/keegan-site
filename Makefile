@@ -2,7 +2,7 @@ SHELL := /usr/local/bin/fish
 .PHONY: prepare run-front run-back build test full-run
 
 prepare:
-	cd frontend && npm install
+	conda env update -f environment.yml && cd frontend && npm install
 
 run-front:
 	cd frontend && npm start

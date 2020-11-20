@@ -8,16 +8,16 @@ function App() {
   return (
     <BrowserRouter>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
+        <div style={{ flexDirection: 'row', flex: 1 }}>
+          <ul style={{ flex: 1 }}>
+            <li style={{ flex: 1 }}>
+              <Link to="">Home</Link>
             </li>
-            <li>
-              <Link to="/about">About</Link>
+            <li style={{ flex: 1 }}>
+              <Link to="about">About</Link>
             </li>
           </ul>
-        </nav>
+        </div>
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}

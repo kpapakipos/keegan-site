@@ -6,7 +6,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 function AboutMeScreen() {
   return (
-    /* pdfLoadingDone && */<Document
+    <Document
       file={myPDF}
       onLoadError={console.error}
     >

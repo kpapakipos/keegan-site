@@ -1,14 +1,20 @@
-SHELL := /usr/local/bin/fish
-.PHONY: prepare run-front run-back build test full-run
+#SHELL := /usr/local/bin/fish
+.PHONY: prepare-back prepare-front prepare run-front run-back build test full-run
+
+prepare-back:
+	cd backend && conda env update -f environment.yml
+
+prepare-front:
+	cd frontend && npm install
 
 prepare:
-	conda env update -f environment.yml && cd frontend && npm install
+	make prepare-back prepare-front
 
 run-front:
 	cd frontend && npm start
 
 run-back:
-	flask run
+	node app.js
 
 build:
 	cd frontend && npm run build

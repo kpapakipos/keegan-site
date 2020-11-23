@@ -6,12 +6,14 @@ pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/$
 
 function AboutMeScreen() {
   return (
-    <Document
-      file={myPDF}
-      onLoadError={console.error}
-    >
-      <Page pageNumber={1} />
-    </Document>
+    <div>
+      <Document
+        file={myPDF}
+        onLoadError={console.error}
+      >
+        <Page pageNumber={1} />
+      </Document>
+    </div>
   );
 }
 

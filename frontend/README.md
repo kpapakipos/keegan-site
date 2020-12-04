@@ -1,3 +1,9 @@
+# Keegan Papakipos' Personal Website
+
+This is my website, built with React. It's still in its infancy for now, but I'm working on it.  
+
+# Create React App Info:
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

@@ -1,4 +1,4 @@
-import { Button, Link, Paper, Tabs } from '@material-ui/core'
+import { Paper, Tabs } from '@material-ui/core'
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import AboutMeScreen from 'screens/AboutMeScreen/AboutMeScreen'

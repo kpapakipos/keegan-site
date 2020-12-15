@@ -4,12 +4,16 @@ import { Document, Page, pdfjs } from 'react-pdf'
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`
 
+function handleLoadError (error) {
+  console.error(error)
+}
+
 function AboutMeScreen () {
   return (
     <div>
       <Document
         file={myPDF}
-        onLoadError={console.error}
+        onLoadError={handleLoadError}
       >
         <Page pageNumber={1} />
       </Document>

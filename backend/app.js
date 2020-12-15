@@ -4,7 +4,7 @@ const express = require('express')
 
 // const client = new Client({ user: 'keeganpapakipos', database: 'movies' });
 const app = express()
-const port = 5000
+const port = 4000
 const path = require('path')
 
 // (async () => {
@@ -14,10 +14,12 @@ const path = require('path')
 //   await client.end()
 // })();
 
-app.use(express.static(path.join(__dirname, 'build')))
+// console.log(path.join(__dirname, '../frontend/build'))
+// app.use('/', express.static(path.join(__dirname, '../frontend/build')))
 
 app.get('/*', (req, res) => {
-  res.sendFile('frontend/build/index.html', { root: path.join(__dirname, '../') })
+  console.log(path.join(__dirname, '../frontend/build/'))
+  res.sendFile('index.html', { root: path.join(__dirname, '../frontend/build/') })
 })
 
 app.listen(port, () => {

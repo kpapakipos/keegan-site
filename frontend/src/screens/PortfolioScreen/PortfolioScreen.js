@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react'
 
-function PortfolioScreen() {
+function PortfolioScreen () {
   return (
-    <div>
-      
-    </div>
-  );
+    <div />
+  )
 }
 
-export default PortfolioScreen;
+export default PortfolioScreen

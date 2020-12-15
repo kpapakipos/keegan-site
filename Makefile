@@ -2,7 +2,7 @@
 .PHONY: prepare-back prepare-front prepare run-front run-back build test full-run
 
 prepare-back:
-	cd backend && conda env update -f environment.yml
+	cd backend && npm install
 
 prepare-front:
 	cd frontend && npm install
